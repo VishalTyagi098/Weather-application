@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  font-family: sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: linear-gradient(90deg, #dd5e89, #f7bb97);
+  color: whitesmoke;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+
+/* LOCATION SECTION */
+.location {
+  height: 50vh;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: #f774b5;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.location-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  text-align: center;
+}
+.icon-desc-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  margin: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+}
+.temp-description {
+  color: rgb(83, 83, 83);
+}
+
+/* TEMPERATURE SECTION */
+.temp {
+  width: 60%;
+  height: 30vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: #f774b5;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* MANUAL LINK */
+.header {
+  width: 100%;
+  height: 10vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.manual-link li {
+  list-style: none;
+}
+.manual-link li a {
+  text-decoration: none;
+  color: white;
+}
+.manual-link li a button {
+  cursor: pointer;
+
+  border: none;
+  background: #3c3b3f;
+  color: #ffffff !important;
+  font-weight: bold;
+  padding: 20px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+}
+.manual-link li a button:hover {
+  font-weight: bolder !important;
+  letter-spacing: 3px;
+  background: #605c3c;
+  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.3s ease 0s;
+}
+
+/* DEGREE CHANGER BUTTON */
+.degree-changer-btn {
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+
+  border: none;
+  background: #db1557;
+  color: #ffffff !important;
+  font-weight: bold;
+  padding: 20px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+}
+
+.degree-changer-btn:hover {
+  color: black !important;
+  font-weight: bolder !important;
+  letter-spacing: 3px;
+  background: #ff9c5e;
+  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.3s ease 0s;
+}
+
+/* SEARCH INPUT AND BUTTON (IN MANUAL) */
+.search {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-input {
+  margin-right: 3%;
+  width: 80%;
+
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 0.8rem 0.2rem;
+  font-size: 1.2rem;
+}
+.search-btn {
+  width: 20%;
+  border: 2px solid grey;
+  border-radius: 10px;
+  cursor: pointer;
+
+  color: black;
+  background-color: grey;
+  padding: 0.8rem 0.2rem;
+
+  font-family: sans-serif;
+  font-size: 1.2rem;
+}
+.search-btn:hover {
+  color: white;
+  border: 2px solid rgb(56, 56, 56);
+  background-color: rgb(56, 56, 56);
+}
+
+/* MEDIA QUERY AT 500 PX */
+
+@media screen and (max-width: 500px) {
+  /* UNIVERSAL TAG */
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  /* LOCATION AND TEMP SECTION */
+  .location {
+    width: 80%;
+  }
+  .temp {
+    width: 80%;
+  }
+  .location-name {
+    height: 120px;
+    padding-top: 2.8rem;
+  }
+
+  .icon-desc-container {
+    flex-direction: column;
+  }
+  .icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* MANUAL WEBPAGE SECTION */
+  .search{
+    width: 80%;
+  }
+  .search-input {
+    margin-right: 1%;
+    width: 70%;
+    font-size: 1rem;
+  }
+  .search-btn {
+    width: 30%;
+    font-size: 1rem;
+  }
+}
